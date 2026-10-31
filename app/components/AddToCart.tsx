@@ -1,8 +1,8 @@
-import Message from "./Message";
+import Message from "./Cards/Message";
 
 const AddToCart = () => {
   return (
-    <div>
+    <div >
       <Message/>
     </div>
   )

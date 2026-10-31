@@ -1,6 +1,7 @@
 interface User {
   id: number,
   name: string,
+  email: string,
 }
 
 
@@ -11,11 +12,23 @@ const UserPage = async () => {
   return (
     <>
       <h1>Users</h1>
-        <ul>
-          {users.map(user =><li key={user.id}>
-              {user.name}
-          </li> )}
-        </ul>
+        <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>email</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map(user =><tr key={user.id}>
+                  <td>{user.name}</td>
+                  <td>{user.email}</td>
+                  
+              </tr> )}
+              </tbody>
+            </table>
+        </div>
     </>
   )
 }
